@@ -2,12 +2,11 @@ const fs = require("fs/promises");
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
 
-
 const contactsPath = path.join(__dirname, "contacts.json");
 
 async function listContacts() {
-    const data = await fs.readFile(contactsPath);
-    return JSON.parse(data)
+    const allContacts = await fs.readFile(contactsPath);
+    return JSON.parse(allContacts)
 };
 
 async function getContactById(contactId) {

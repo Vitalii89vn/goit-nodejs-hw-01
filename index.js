@@ -1,4 +1,3 @@
-
 const contacts = require("./db/contacts");
 const argv = require("yargs").argv;
 
